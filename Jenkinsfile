@@ -1,15 +1,15 @@
 pipeline {
    environment {
-     git_url = "https://github.com/salilkul/java-project.git"
+     git_url = "https://github.com/abhilashkunnekavil/java-project.git"
      git_branch = "master"
    }
 
-  //agent {label 'dev'}
-  agent any
+  agent {label 'dev'}
+  //agent any
   stages {
     stage('Pull Source') {
       steps {
-        git credentialsId: 'cb2a659c-85f6-4bd6-88fa-ff29f003df41', branch: "${git_branch}", url: "${git_url}"
+        git credentialsId: 'ea4acf3b-c4f9-46c2-b1b2-5dcf157947bd', branch: "${git_branch}", url: "${git_url}"
        
       }
      }
